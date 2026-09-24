@@ -577,7 +577,7 @@ ul.list.vertical li {
 }
 
 body.eureka {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/call-to-cast-devices.jpg) no-repeat right center;
+    background: url(https://tv36.pages.dev/assets/call-to-cast-devices.jpg) no-repeat right center;
     background-size: 50%;
     background-color: #1c1a1a
 }
@@ -587,7 +587,7 @@ body.eureka.new-end-screens {
 }
 
 .carousel-loading-indicator {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/carousel-loading-indicator.gif);
+    background: url(https://tv36.pages.dev/assets/carousel-loading-indicator.gif);
     background-size: 100%;
     border-radius: 1em;
     height: 11.5em;
@@ -931,7 +931,7 @@ body.eureka.new-end-screens {
     background: no-repeat center;
     background-color: #252525;
     background-size: auto;
-    background-image: url('https://hashpie.pages.dev/services/xtsd/img/icon-playbutton.png')
+    background-image: url('https://tv36.pages.dev/assets/icon-playbutton.png')
 }
 
 .post-play-tile {
@@ -1414,7 +1414,7 @@ body.eureka.new-end-screens {
 }
 
 .pairing .cast-icon {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/cast_disconnected.png) no-repeat center;
+    background: url(https://tv36.pages.dev/assets/cast_disconnected.png) no-repeat center;
     background-size: contain;
     display: inline-block;
     height: 1em;
@@ -1459,7 +1459,7 @@ body.eureka.new-end-screens {
 }
 
 .remote-reset-dialog ul.devices li::before,.pairing ul.devices li::before {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/pairing-sprite.png) no-repeat 0 0%;
+    background: url(https://tv36.pages.dev/assets/pairing-sprite.png) no-repeat 0 0%;
     background-size: 1em;
     content: '';
     display: block;
@@ -1536,7 +1536,7 @@ body.eureka.new-end-screens {
 
 #search-text-box {
     background-color: #f1f1f1;
-    background: transparent url(https://hashpie.pages.dev/services/xtsd/img/bg-search-input.png) repeat-x;
+    background: transparent url(https://tv36.pages.dev/assets/bg-search-input.png) repeat-x;
     font-size: 1.7em;
     height: 1.5em;
     line-height: 1.5em;
@@ -1706,7 +1706,7 @@ body.eureka.new-end-screens {
     background-size: 80%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-delete.png);
+    background-image: url(https://tv36.pages.dev/assets/icon-delete.png);
     width: .9em
 }
 
@@ -1738,7 +1738,7 @@ body.eureka.new-end-screens {
 }
 
 #keyboard-grid .language-toggle-tile {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/icon-globe.png) no-repeat center center;
+    background: url(https://tv36.pages.dev/assets/icon-globe.png) no-repeat center center;
     background-size: 80%;
     width: 1.2em
 }
@@ -2832,7 +2832,7 @@ body.eureka.new-end-screens {
 }
 
 .toaster .toast-icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/dial-sprite.png);
+    background-image: url(https://tv36.pages.dev/assets/dial-sprite.png);
     background-size: 100%;
     max-width: 100%
 }
@@ -2902,19 +2902,19 @@ body.eureka.new-end-screens {
 }
 
 .toaster .volume-muted {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/volume_mute_pressed.png)
+    background-image: url(https://tv36.pages.dev/assets/volume_mute_pressed.png)
 }
 
 .toaster .volume-low {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/volume_0_pressed.png)
+    background-image: url(https://tv36.pages.dev/assets/volume_0_pressed.png)
 }
 
 .toaster .volume-mid {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/volume_1_pressed.png)
+    background-image: url(https://tv36.pages.dev/assets/volume_1_pressed.png)
 }
 
 .toaster .volume-high {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/volume_2_pressed.png)
+    background-image: url(https://tv36.pages.dev/assets/volume_2_pressed.png)
 }
 
 .toaster .volume-toast .toast-msg {
@@ -3075,7 +3075,7 @@ body.eureka.new-end-screens {
 }
 
 #dialog.deluxe.onboarding .dialog-image {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/img_guide_static.jpg)
+    background-image: url(https://tv36.pages.dev/assets/img_guide_static.jpg)
 }
 
 #dialog.browse-sets.exit .dialog-contents .header .title {
@@ -3194,11 +3194,11 @@ body.eureka.new-end-screens {
 }
 
 #dialog.help .dialog-icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-help.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-help.png)
 }
 
 #dialog.feedback .dialog-icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-feedback.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-feedback.png)
 }
 
 #dialog.system-error .dialog-icon {
@@ -3277,7 +3277,7 @@ body.eureka.new-end-screens {
 }
 
 #dialog.deluxe.login .dialog-image {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/login_icon.jpg)
+    background-image: url(https://tv36.pages.dev/assets/login_icon.jpg)
 }
 
 #dialog.deluxe.login #dialog-ok-button {
@@ -3462,7 +3462,7 @@ body.eureka.new-end-screens {
 }
 
 .flag-example {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/flag.png) no-repeat 0 0;
+    background: url(https://tv36.pages.dev/assets/flag.png) no-repeat 0 0;
     background-size: contain;
     display: inline-block;
     height: 57%;
@@ -3552,7 +3552,7 @@ body.eureka.new-end-screens {
 }
 
 #shiyojo .playstation-logo,#shiyojo .ps3-logo,#kenko .warning {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/logo-playstation.png);
+    background-image: url(https://tv36.pages.dev/assets/logo-playstation.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -3566,12 +3566,12 @@ body.eureka.new-end-screens {
 }
 
 #shiyojo .ps3-logo {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/logo-ps3.png);
+    background-image: url(https://tv36.pages.dev/assets/logo-ps3.png);
     width: 2.7em
 }
 
 #kenko .warning {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-warning.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-warning.png)
 }
 
 .paid-channel-info {
@@ -3588,7 +3588,7 @@ body.eureka.new-end-screens {
 }
 
 .status-dialog .icon {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/pairing-promo-combo.png) center center no-repeat;
+    background: url(https://tv36.pages.dev/assets/pairing-promo-combo.png) center center no-repeat;
     background-size: contain;
     display: inline-block;
     height: 11em;
@@ -3788,19 +3788,19 @@ body.eureka.new-end-screens {
 }
 
 .modify-video .modify-edit-button {
-    background-image: url('https://hashpie.pages.dev/services/xtsd/img/edit_tile_light.png')
+    background-image: url('https://tv36.pages.dev/assets/edit_tile_light.png')
 }
 
 .modify-video .modify-edit-button.focused {
-    background-image: url('https://hashpie.pages.dev/services/xtsd/img/edit_tile_dark.png')
+    background-image: url('https://tv36.pages.dev/assets/edit_tile_dark.png')
 }
 
 .modify-video .modify-delete-button {
-    background-image: url('https://hashpie.pages.dev/services/xtsd/img/trash_tile_light.png')
+    background-image: url('https://tv36.pages.dev/assets/trash_tile_light.png')
 }
 
 .modify-video .modify-delete-button.focused {
-    background-image: url('https://hashpie.pages.dev/services/xtsd/img/trash_tile_dark.png')
+    background-image: url('https://tv36.pages.dev/assets/trash_tile_dark.png')
 }
 
 .dialog.browse-sets .video-tile-container {
@@ -3894,11 +3894,11 @@ body.eureka.new-end-screens {
 }
 
 .privacy-button.checked .checkbox {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-check-light.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-check-light.png)
 }
 
 .privacy-button.focused.checked .checkbox {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-check-dark.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-check-dark.png)
 }
 
 .privacy-button .label .name {
@@ -3921,27 +3921,27 @@ body.eureka.new-end-screens {
 }
 
 .private-state,.video-tile .private {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-private-light.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-private-light.png)
 }
 
 .private-state.focused {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-private-dark.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-private-dark.png)
 }
 
 .public-state,.video-tile .public {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-public-light.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-public-light.png)
 }
 
 .public-state.focused {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-public-dark.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-public-dark.png)
 }
 
 .unlisted-state,.video-tile .unlisted {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-unlisted-light.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-unlisted-light.png)
 }
 
 .unlisted-state.focused {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-privacy-unlisted-dark.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-privacy-unlisted-dark.png)
 }
 
 .video-tile .private,.video-tile .public,.video-tile .unlisted {
@@ -4203,7 +4203,7 @@ body.eureka.new-end-screens {
 }
 
 .engagement-indicator .stop-listening .icon {
-    background-image: url('https://hashpie.pages.dev/services/xtsd/img/icon-xboxone-engaged.png')
+    background-image: url('https://tv36.pages.dev/assets/icon-xboxone-engaged.png')
 }
 
 .engagement-indicator .text {
@@ -4332,19 +4332,19 @@ body.eureka.new-end-screens {
 }
 
 .desktop .legend-item .icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/legend-sprite-desktop.png)
+    background-image: url(https://tv36.pages.dev/assets/legend-sprite-desktop.png)
 }
 
 .ps3 .legend-item .icon,.ps4 .legend-item .icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/legend-sprite-ps3.png)
+    background-image: url(https://tv36.pages.dev/assets/legend-sprite-ps3.png)
 }
 
 .skip-ad-callout .icon,.tv .legend-item .icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/legend-sprite-tv.png)
+    background-image: url(https://tv36.pages.dev/assets/legend-sprite-tv.png)
 }
 
 .wiiu .legend-item .icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/legend-sprite-wiiu.png)
+    background-image: url(https://tv36.pages.dev/assets/legend-sprite-wiiu.png)
 }
 
 .wiiu #user-info-background {
@@ -4352,7 +4352,7 @@ body.eureka.new-end-screens {
 }
 
 .xboxone .legend-item .icon {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/legend-sprite-xboxone.png)
+    background-image: url(https://tv36.pages.dev/assets/legend-sprite-xboxone.png)
 }
 
 .desktop .legend-item.back .icon,.desktop .legend-item.exit .icon {
@@ -4629,7 +4629,7 @@ body.limited-memory {
 }
 
 .limited-animation .hide-background.video-tile .video-thumb {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-playbutton.png)!important;
+    background-image: url(https://tv36.pages.dev/assets/icon-playbutton.png)!important;
     background-repeat: no-repeat;
     opacity: 1
 }
@@ -4756,12 +4756,12 @@ body.limited-memory {
 }
 
 .eureka #watch.play #eureka-player-controls {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/player-play.png);
+    background-image: url(https://tv36.pages.dev/assets/player-play.png);
     -webkit-animation: hideAndGrowPlay linear 0.25s 0s 1 normal none
 }
 
 .eureka #watch.pause #eureka-player-controls {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/player-pause.png);
+    background-image: url(https://tv36.pages.dev/assets/player-pause.png);
     -webkit-animation: showAndShrinkPause linear 0.25s 0s 1 normal none;
     opacity: .7
 }
@@ -4805,7 +4805,7 @@ body.limited-memory {
 }
 
 .xboxone #search-keyboard .delete-tile:hover {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-delete.png);
+    background-image: url(https://tv36.pages.dev/assets/icon-delete.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 80%
@@ -5307,7 +5307,7 @@ body.limited-memory {
 
 .call-to-cast.focused {
     display: block;
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/call-to-cast-yt-logo.jpg);
+    background-image: url(https://tv36.pages.dev/assets/call-to-cast-yt-logo.jpg);
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 13.5em;
@@ -5355,15 +5355,15 @@ h3.call-to-cast-text {
 }
 
 .call-to-cast .end-screen.multi-user {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/call-to-cast-end-screen-multi-user.jpg)
+    background-image: url(https://tv36.pages.dev/assets/call-to-cast-end-screen-multi-user.jpg)
 }
 
 .call-to-cast .end-screen.yt-mix {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/call-to-cast-end-screen-yt-mix.jpg)
+    background-image: url(https://tv36.pages.dev/assets/call-to-cast-end-screen-yt-mix.jpg)
 }
 
 .call-to-cast .end-screen.tv-queue {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/call-to-cast-end-screen-tv-queue.jpg)
+    background-image: url(https://tv36.pages.dev/assets/call-to-cast-end-screen-tv-queue.jpg)
 }
 
 .call-to-cast .end-screen .call-to-cast-text {
@@ -5394,7 +5394,7 @@ h3.call-to-cast-text {
 }
 
 .call-to-cast .end-screen .yt-logo {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/call-to-cast-yt-logo.png);
+    background-image: url(https://tv36.pages.dev/assets/call-to-cast-yt-logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     bottom: 8%;
@@ -5466,7 +5466,7 @@ h3.call-to-cast-text {
 }
 
 .snapped .logo-container {
-    background: url(https://hashpie.pages.dev/services/xtsd/img/yt-logo-fullcolor.png) no-repeat center top;
+    background: url(https://tv36.pages.dev/assets/yt-logo-fullcolor.png) no-repeat center top;
     display: inherit;
     font-size: 1.5em;
     height: 1.5em;
@@ -5575,7 +5575,7 @@ h3.call-to-cast-text {
 }
 
 .snap-controls .unmute {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-delete.png);
+    background-image: url(https://tv36.pages.dev/assets/icon-delete.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 80%;
@@ -5583,15 +5583,15 @@ h3.call-to-cast-text {
 }
 
 .snap-controls .mute {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-mute.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-mute.png)
 }
 
 .snap-controls .mute.toggle-selected {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-unmute.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-unmute.png)
 }
 
 .snap-controls .fullscreen {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/icon-fullscreen.png)
+    background-image: url(https://tv36.pages.dev/assets/icon-fullscreen.png)
 }
 
 .snapped .carousel-loading-indicator {
@@ -5694,27 +5694,27 @@ h3.call-to-cast-text {
 }
 
 .snap-controls .icon-mute,.snap-controls .icon-mute.disabled {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/button-unmute-active.png)
+    background-image: url(https://tv36.pages.dev/assets/button-unmute-active.png)
 }
 
 .snap-controls .icon-mute.focused,.snap-controls .icon-mute:hover:not(.disabled) {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/button-unmute-onhover-active.png)
+    background-image: url(https://tv36.pages.dev/assets/button-unmute-onhover-active.png)
 }
 
 .snap-controls .icon-mute.toggle-selected {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/button-mute-active.png)
+    background-image: url(https://tv36.pages.dev/assets/button-mute-active.png)
 }
 
 .snap-controls .icon-mute.toggle-selected.focused,.snap-controls .icon-mute.toggle-selected:hover {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/button-mute-onhover-active.png)
+    background-image: url(https://tv36.pages.dev/assets/button-mute-onhover-active.png)
 }
 
 .snap-controls .icon-fullscreen {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/button-fullscreen-active.png)
+    background-image: url(https://tv36.pages.dev/assets/button-fullscreen-active.png)
 }
 
 .snap-controls .icon-fullscreen.focused,.snap-controls .icon-fullscreen:hover {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/button-fullscreen-onhover-active.png)
+    background-image: url(https://tv36.pages.dev/assets/button-fullscreen-onhover-active.png)
 }
 
 .up-next {
@@ -6688,7 +6688,7 @@ h3.call-to-cast-text {
 }
 
 .pointer-overlay .nav-arrow {
-    background-image: url(https://hashpie.pages.dev/services/xtsd/img/motion-control-sprite.png);
+    background-image: url(https://tv36.pages.dev/assets/motion-control-sprite.png);
     background-repeat: no-repeat;
     background-size: 100%;
     cursor: pointer;
