@@ -52,6 +52,114 @@ return new Response(`{
         ],
         "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
       }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+              "icon": {
+                "iconType": "UPLOADS"
+              },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "My Uploads"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "FEuploads"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+              "icon": {
+                "iconType": "SOCIAL"
+              },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "See More"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "FEuploads"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+              "icon": {
+                "iconType": "PURCHASES"
+              },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "My Purchases"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "FEuploads"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+              "icon": {
+                "iconType": "MUSIC"
+              },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "Music"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "FEmusic"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
     }
   ]
 }`, {
