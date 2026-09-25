@@ -12,6 +12,7 @@ export async function onRequest(context) {
 
     let endpoint;
     let channelUploads = false;
+    let playlist = false;
 
     if (browseId === "FEwhat_to_watch") {
         endpoint =
@@ -35,7 +36,13 @@ export async function onRequest(context) {
 
         channelUploads = true;
 
-    } if (browseId === "FEmusic") {
+    } else if (browseId.startsWith("PL")) {
+        endpoint =
+            `https://inv.truehosting.net/api/v1/playlists/${encodeURIComponent(browseId)}`;
+
+        playlist = true;
+
+    } else if (browseId === "FEmusic") {
         endpoint =
             "https://inv.truehosting.net/api/v1/search?q=music%20before:2015";
 
@@ -76,6 +83,12 @@ export async function onRequest(context) {
                 data.latestVideos ||
                 data.videos ||
                 [];
+
+        } else if (playlist) {
+            source =
+                data.videos ||
+                [];
+
         } else {
             source = data;
         }
@@ -164,7 +177,15 @@ export async function onRequest(context) {
                         ) ||
                         data.authorThumbnails?.[0]
                     )
-                    : null;
+                    : playlist
+                        ? (
+                            data.authorThumbnails?.find(
+                                thumbnail =>
+                                    thumbnail.width >= 88
+                            ) ||
+                            data.authorThumbnails?.[0]
+                        )
+                        : null;
 
             return {
                 videoRenderer: {

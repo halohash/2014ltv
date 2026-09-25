@@ -193,6 +193,105 @@ return new Response(`{
         ],
         "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
       }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+                      "thumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "icon-trends",
+                            "width": 480,
+                            "height": 360
+                          }
+                        ]
+                      },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "Top 100 Music Videos United States"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "PL4fGSI1pDJn69On1f-8NAvX_CYlx7QyZc"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+                      "thumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "icon-edit",
+                            "width": 480,
+                            "height": 360
+                          }
+                        ]
+                      },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "Music 2013-10-17"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "PL-Nwc3mF0lHnH8FI3wXG0Wx9AEAtOaPc3"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+                      "thumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "icon-check",
+                            "width": 480,
+                            "height": 360
+                          }
+                        ]
+                      },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "Film 2013-12-04"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "PLlGGkFdiLGB713fUsrRhG6oecjd67Zm2r"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
     }
   ]
 }`, {
