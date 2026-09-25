@@ -64,6 +64,35 @@
                     ]
                   }
                 }
+              },{
+                "videoRenderer": {
+                  "videoId": "funny",
+                  "thumbnail": {
+                    "thumbnails": [
+                      {
+                        "url": "https://s.ytimg.com/yt/imgbin/www-refresh-vflHCLfcf.png",
+                        "width": 480,
+                        "height": 360
+                      }
+                    ]
+                  },
+                  "shortBylineText": {
+                    "runs": [
+                      {
+                        "text": "some ripe oranges"
+                      }
+                    ]
+                  },
+                  "publishedTimeText": "37 ripe oranges ago",
+                  "viewCountText": "67 views",
+                  "title": {
+                    "runs": [
+                      {
+                        "text": "he's gonna destroy the earth. for the funny."
+                      }
+                    ]
+                  }
+                }
               }
             ]
           }
