@@ -36,7 +36,7 @@ export async function onRequest(context) {
 
         channelUploads = true;
 
-    } else if (browseId.startsWith("PL")) {
+    } else if (browseId.startsWith("PL") || browseId.startsWith("FL")) {
         endpoint =
             `https://inv.truehosting.net/api/v1/playlists/${encodeURIComponent(browseId)}`;
 
