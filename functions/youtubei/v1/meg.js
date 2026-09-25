@@ -1,15 +1,25 @@
 import meg from '../../../data/meg.json';
 
 export async function onRequest(context) {
-  const { request } = context
-  const method = request.method
+  const { request } = context;
+  const method = request.method;
 
-return new Response(meg, {
+  // Handle CORS preflight requests if needed
+  if (method === "OPTIONS") {
+    return new Response(null, {
       headers: {
-        "content-type": "application/json; charset=UTF-8",
-        "access-control-allow-origin": "*",
-        "access-control-allow-methods": "GET, POST, OPTIONS",
-        "access-control-allow-headers": "*"
-      }
-    })
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "*",
+      },
+    });
+  }
+
+  return Response.json(meg, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "*",
+    }
+  });
 }
