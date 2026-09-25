@@ -151,6 +151,17 @@ export async function onRequest(context) {
                 thumbnail?.url ||
                 `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
+            const channelThumbnail =
+                channelUploads
+                    ? (
+                        data.authorThumbnails?.find(
+                            thumbnail =>
+                                thumbnail.width >= 88
+                        ) ||
+                        data.authorThumbnails?.[0]
+                    )
+                    : null;
+
             return {
                 videoRenderer: {
                     videoId: videoId,
@@ -165,6 +176,18 @@ export async function onRequest(context) {
                                 height:
                                     thumbnail?.height ||
                                     360
+                            }
+                        ]
+                    },
+
+                    channelThumbnail: {
+                        thumbnails: [
+                            {
+                                url:
+                                    channelThumbnail?.url ||
+                                    "https://file.garden/aUYIWVAKvQxCBY-_/database/images/profilepuckett.png",
+                                width: 88,
+                                height: 88
                             }
                         ]
                     },
