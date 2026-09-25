@@ -23,7 +23,7 @@ export async function onRequest(context) {
 
     } else if (browseId === "FEtopics") {
         endpoint =
-            "https://inv.truehosting.net/api/v1/search?q=xbox%20before:2014";
+            "https://inv.truehosting.net/api/v1/search?q=xbox%20before:2015";
 
     } else if (browseId === "FEtopics_purchases") {
         endpoint =
@@ -34,6 +34,10 @@ export async function onRequest(context) {
             `https://inv.truehosting.net/api/v1/channels/${encodeURIComponent(browseId)}`;
 
         channelUploads = true;
+
+    } if (browseId === "FEmusic") {
+        endpoint =
+            "https://inv.truehosting.net/api/v1/search?q=music%20before:2015";
 
     } else {
         endpoint =
