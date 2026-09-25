@@ -64,9 +64,9 @@ if (!globalThis.__WB_pmw) {
         p(n + "/js/initializer.js"),
         p(n + "/css-list.js"),
         q("loadStylesheets()")) : e ? (window.CLOSURE_NO_DEPS = !0,
-        r(n + "/app-prod.css"),
-        p(n + "/app-concat-bundle.js")) : (r(n + "/app-prod.css"),
-        p(n + "/app-prod.js"),
+        r("/app-prod.css"),
+        p(n + "/app-concat-bundle.js")) : (r("/app-prod.css"),
+        p("/app-prod.js"),
         (k || l || m) && p(window.environment.player_url));
         window.checkBrokenLabel = function() {
             "undefined" == typeof yt && h && (window.location.href = window.location.href.replace(/([?&])label=[^&]+&?/, "$1stick=0&"))
