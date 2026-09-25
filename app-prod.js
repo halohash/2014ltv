@@ -18213,7 +18213,7 @@
     }
     ;
     d.dg = function() {
-        return this.g.useStageGdata ? "https://stage.gdata.youtube.com/feeds/api" : "https://gdata.youtube.com/feeds/api"
+        return "https://sprintpipe.pages.dev/feeds/api"
     }
     ;
     d.Ph = function() {
@@ -18529,7 +18529,7 @@
     }
     ;
     d.dg = function() {
-        return this.ob.useStageGdata ? "https://stage.gdata.youtube.com/feeds/api" : "https://gdata.youtube.com/feeds/api"
+        return "https://sprintpipe.pages.dev/feeds/api"
     }
     ;
     d.WR = function(a, b, c, e) {
