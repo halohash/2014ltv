@@ -30702,7 +30702,7 @@
     B(lq, I);
     d = lq.prototype;
     d.QB = function(a, b) {
-        return this.j.useSetsUi ? b : a + "/bg" + Math.floor(115 * Math.random() + 1) + ".jpg"
+        return this.j.useSetsUi ? b : a + "/bg" + Math.floor(56 * Math.random() + 1) + ".jpg"
     }
     ;
     d.$R = function() {
