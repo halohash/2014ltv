@@ -1,85 +1,196 @@
 export async function onRequest(context) {
-  const { request } = context
-  const method = request.method
+    const url = new URL(context.request.url);
 
-return new Response(`{
-  "contents": {
-    "sectionListRenderer": {
-      "contents": [
-        {
-          "itemSectionRenderer": {
-            "contents": [
-              {
-  "videoRenderer": {
-    "videoId": "PLACEHOLDER",
-                      "thumbnail": {
-                        "thumbnails": [
-                          {
-                            "url": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-                            "width": 480,
-                            "height": 360
-                          }
-                        ]
-                      },
-                      "shortBylineText": {
-                        "runs": [
-                          {
-                            "text": "Unknown"
-                          }
-                        ]
-                      },
-"publishedTimeText":"12 Dozen Donuts ago",
-"viewCountText": "1,234 views",
-    "title": {
-      "runs": [
-        {
-          "text": "video 1"
-        }
-      ]
+    const body = await context.request.json().catch(() => ({}));
+
+    const browseId = body.browseId || "FEwhat_to_watch";
+    const maxResults = Math.min(
+        parseInt(body["max-results"] || 25, 10),
+        25
+    );
+
+    let endpoint;
+
+    if (browseId === "FEwhat_to_watch") {
+        endpoint = "https://inv.truehosting.net/api/v1/popular";
+    } else if (browseId === "FEuploads") {
+        endpoint = "https://inv.truehosting.net/api/v1/search?q=google%20nexus%20before:2014";
+    } else if (browseId === "FEtopics") {
+        endpoint = "https://inv.truehosting.net/api/v1/search?q=xbox%20before:2014";
+    } else {
+        endpoint = "https://inv.truehosting.net/api/v1/popular";
     }
-  }
-},{
-  "videoRenderer": {
-    "videoId": "PLACEHOxDE2",
-                      "thumbnail": {
-                        "thumbnails": [
-                          {
-                            "url": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hq1.jpg",
-                            "width": 480,
-                            "height": 360
-                          }
-                        ]
-                      },
-                      "shortBylineText": {
-                        "runs": [
-                          {
-                            "text": "Unknown"
-                          }
-                        ]
-                      },
-"publishedTimeText":"15 Dozen Donuts ago",
-"viewCountText": "0 views",
-    "title": {
-      "runs": [
-        {
-          "text": "video 2"
+
+    try {
+        const response = await fetch(endpoint, {
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (!response.ok) {
+            return new Response(
+                JSON.stringify({
+                    error: "Invidious request failed",
+                    status: response.status
+                }),
+                {
+                    status: 502,
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Access-Control-Allow-Origin": "*"
+                    }
+                }
+            );
         }
-      ]
+
+        const data = await response.json();
+
+        const videos = data
+            .filter(item =>
+                item.type === "video" ||
+                item.videoId ||
+                item.id
+            )
+            .slice(0, maxResults);
+
+        const contents = videos.map(video => {
+            const videoId = video.videoId || video.id || "";
+
+            const title =
+                typeof video.title === "string"
+                    ? video.title
+                    : "";
+
+            const author =
+                typeof video.author === "string"
+                    ? video.author
+                    : "";
+
+            let views = video.viewCount;
+
+            if (views === undefined || views === null) {
+                views = video.views;
+            }
+
+            if (typeof views === "string") {
+                views = parseInt(
+                    views.replace(/,/g, ""),
+                    10
+                );
+            }
+
+            if (!Number.isFinite(views)) {
+                views = 0;
+            }
+
+            let published = video.publishedText;
+
+            if (!published) {
+                published = video.publishedTimeText;
+            }
+
+            if (!published) {
+                published = "";
+            }
+
+            const thumbnail =
+                video.videoThumbnails?.find(
+                    thumbnail =>
+                        thumbnail.quality === "medium" ||
+                        thumbnail.quality === "high"
+                ) ||
+                video.videoThumbnails?.[0];
+
+            const thumbnailUrl =
+                thumbnail?.url ||
+                `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+
+            return {
+                videoRenderer: {
+                    videoId: videoId,
+
+                    thumbnail: {
+                        thumbnails: [
+                            {
+                                url: thumbnailUrl,
+                                width: thumbnail?.width || 480,
+                                height: thumbnail?.height || 360
+                            }
+                        ]
+                    },
+
+                    shortBylineText: {
+                        runs: [
+                            {
+                                text: author
+                            }
+                        ]
+                    },
+
+                    publishedTimeText: published,
+
+                    viewCountText:
+                        views.toLocaleString("en-US") +
+                        " views",
+
+                    title: {
+                        runs: [
+                            {
+                                text: title
+                            }
+                        ]
+                    }
+                }
+            };
+        });
+
+        return new Response(
+            JSON.stringify({
+                contents: {
+                    sectionListRenderer: {
+                        contents: [
+                            {
+                                itemSectionRenderer: {
+                                    contents
+                                }
+                            }
+                        ]
+                    }
+                }
+            }),
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Cache-Control": "no-store"
+                }
+            }
+        );
+
+    } catch (error) {
+        return new Response(
+            JSON.stringify({
+                error: error.message
+            }),
+            {
+                status: 500,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*"
+                }
+            }
+        );
     }
-  }
 }
-            ]
-          }
+
+export async function onRequestOptions() {
+    return new Response(null, {
+        status: 204,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
         }
-      ]
-    }
-  }
-}`, {
-      headers: {
-        "content-type": "application/json; charset=UTF-8",
-        "access-control-allow-origin": "*",
-        "access-control-allow-methods": "GET, POST, OPTIONS",
-        "access-control-allow-headers": "*"
-      }
-    })
+    });
 }
