@@ -17,6 +17,8 @@ export async function onRequest(context) {
         endpoint = "https://inv.truehosting.net/api/v1/search?q=google%20nexus%20before:2014";
     } else if (browseId === "FEtopics") {
         endpoint = "https://inv.truehosting.net/api/v1/search?q=xbox%20before:2014";
+    } else if (browseId === "FEpurchases") {
+        endpoint = "https://inv.truehosting.net/api/v1/search?q=https%3A%2F%2Fyoutube.com%2Fdevicesupport";
     } else {
         endpoint = "https://inv.truehosting.net/api/v1/popular";
     }

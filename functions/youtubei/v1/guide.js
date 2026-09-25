@@ -125,7 +125,7 @@ return new Response(`{
               "navigationEndpoint": {
                 "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
                 "browseEndpoint": {
-                  "browseId": "FEuploads"
+                  "browseId": "FEpurchases"
                 }
               }
             }
