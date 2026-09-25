@@ -160,6 +160,39 @@ return new Response(`{
         ],
         "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
       }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+                      "thumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://i.ytimg.com/vi/fgyAKNR6qeA/hq1.jpg",
+                            "width": 480,
+                            "height": 360
+                          }
+                        ]
+                      },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "Plainrock124"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "UCFUsBdbrNe2a8tnVsxBwoZw"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
     }
   ]
 }`, {

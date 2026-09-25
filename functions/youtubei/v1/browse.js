@@ -4,23 +4,40 @@ export async function onRequest(context) {
     const body = await context.request.json().catch(() => ({}));
 
     const browseId = body.browseId || "FEwhat_to_watch";
+
     const maxResults = Math.min(
         parseInt(body["max-results"] || 25, 10),
         25
     );
 
     let endpoint;
+    let channelUploads = false;
 
     if (browseId === "FEwhat_to_watch") {
-        endpoint = "https://inv.truehosting.net/api/v1/popular";
+        endpoint =
+            "https://inv.truehosting.net/api/v1/popular";
+
     } else if (browseId === "FEuploads") {
-        endpoint = "https://inv.truehosting.net/api/v1/search?q=google%20nexus%20before:2014";
+        endpoint =
+            "https://inv.truehosting.net/api/v1/search?q=google%20nexus%20before:2014";
+
     } else if (browseId === "FEtopics") {
-        endpoint = "https://inv.truehosting.net/api/v1/search?q=xbox%20before:2014";
+        endpoint =
+            "https://inv.truehosting.net/api/v1/search?q=xbox%20before:2014";
+
     } else if (browseId === "FEtopics_purchases") {
-        endpoint = "https://inv.truehosting.net/api/v1/search?q=https%3A%2F%2Fyoutube.com%2Fdevicesupport";
+        endpoint =
+            "https://inv.truehosting.net/api/v1/search?q=https%3A%2F%2Fyoutube.com%2Fdevicesupport";
+
+    } else if (browseId.startsWith("UC")) {
+        endpoint =
+            `https://inv.truehosting.net/api/v1/channels/${encodeURIComponent(browseId)}`;
+
+        channelUploads = true;
+
     } else {
-        endpoint = "https://inv.truehosting.net/api/v1/popular";
+        endpoint =
+            "https://inv.truehosting.net/api/v1/popular";
     }
 
     try {
@@ -48,16 +65,37 @@ export async function onRequest(context) {
 
         const data = await response.json();
 
-        const videos = data
+        let source;
+
+        if (channelUploads) {
+            source =
+                data.latestVideos ||
+                data.videos ||
+                [];
+        } else {
+            source = data;
+        }
+
+        if (!Array.isArray(source)) {
+            source = [];
+        }
+
+        const videos = source
             .filter(item =>
-                item.type === "video" ||
-                item.videoId ||
-                item.id
+                item &&
+                (
+                    item.type === "video" ||
+                    item.videoId ||
+                    item.id
+                )
             )
             .slice(0, maxResults);
 
         const contents = videos.map(video => {
-            const videoId = video.videoId || video.id || "";
+            const videoId =
+                video.videoId ||
+                video.id ||
+                "";
 
             const title =
                 typeof video.title === "string"
@@ -71,7 +109,10 @@ export async function onRequest(context) {
 
             let views = video.viewCount;
 
-            if (views === undefined || views === null) {
+            if (
+                views === undefined ||
+                views === null
+            ) {
                 views = video.views;
             }
 
@@ -86,10 +127,12 @@ export async function onRequest(context) {
                 views = 0;
             }
 
-            let published = video.publishedText;
+            let published =
+                video.publishedText;
 
             if (!published) {
-                published = video.publishedTimeText;
+                published =
+                    video.publishedTimeText;
             }
 
             if (!published) {
@@ -116,8 +159,12 @@ export async function onRequest(context) {
                         thumbnails: [
                             {
                                 url: thumbnailUrl,
-                                width: thumbnail?.width || 480,
-                                height: thumbnail?.height || 360
+                                width:
+                                    thumbnail?.width ||
+                                    480,
+                                height:
+                                    thumbnail?.height ||
+                                    360
                             }
                         ]
                     },
@@ -130,11 +177,13 @@ export async function onRequest(context) {
                         ]
                     },
 
-                    publishedTimeText: published,
+                    publishedTimeText:
+                        published,
 
                     viewCountText:
-                        views.toLocaleString("en-US") +
-                        " views",
+                        views.toLocaleString(
+                            "en-US"
+                        ) + " views",
 
                     title: {
                         runs: [
@@ -163,9 +212,14 @@ export async function onRequest(context) {
             }),
             {
                 headers: {
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                    "Cache-Control": "no-store"
+                    "Content-Type":
+                        "application/json",
+
+                    "Access-Control-Allow-Origin":
+                        "*",
+
+                    "Cache-Control":
+                        "no-store"
                 }
             }
         );
@@ -178,8 +232,11 @@ export async function onRequest(context) {
             {
                 status: 500,
                 headers: {
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*"
+                    "Content-Type":
+                        "application/json",
+
+                    "Access-Control-Allow-Origin":
+                        "*"
                 }
             }
         );
@@ -189,10 +246,16 @@ export async function onRequest(context) {
 export async function onRequestOptions() {
     return new Response(null, {
         status: 204,
+
         headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type"
+            "Access-Control-Allow-Origin":
+                "*",
+
+            "Access-Control-Allow-Methods":
+                "GET, POST, OPTIONS",
+
+            "Access-Control-Allow-Headers":
+                "Content-Type"
         }
     });
 }
