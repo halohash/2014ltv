@@ -47,11 +47,11 @@ export async function onRequest(context) {
             "https://inv.truehosting.net/api/v1/search?q=music%20before:2015";
 
     } else if (browseId === "FEmeg") {
-        endpoint =
-            "https://inv.truehosting.net/api/v1/search?q=music%20before:2015";
+        return Response.redirect("https://2014ltv.pages.dev/youtubei/v1/meg", 302);
 
     } else {
-        return Response.redirect("https://2014ltv.pages.dev/youtubei/v1/meg", statusCode);
+        endpoint =
+            "https://inv.truehosting.net/api/v1/popular";
     }
 
     try {
