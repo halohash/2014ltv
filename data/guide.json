@@ -321,6 +321,39 @@
         ],
         "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
       }
+    },{
+      "guideSectionRenderer": {
+        "items": [
+          {
+            "guideEntryRenderer": {
+                      "thumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "icon-settings-uncheck",
+                            "width": 480,
+                            "height": 360
+                          }
+                        ]
+                      },
+              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
+              "formattedTitle": {
+                "runs": [
+                  {
+                    "text": "shut up meg"
+                  }
+                ]
+              },
+              "navigationEndpoint": {
+                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
+                "browseEndpoint": {
+                  "browseId": "FEmeg"
+                }
+              }
+            }
+          }
+        ],
+        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
+      }
     }
   ]
 }
