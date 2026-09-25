@@ -32215,7 +32215,7 @@
         if (this.h.get()) {
             a = a.detail;
             var b = this.j.get(a);
-            b ? this.i(b) : (b = new pp(this.p + "/sound/" + a + (this.k.supportsMp3 ? ".mp3" : ".wav")),
+            b ? this.i(b) : (b = new pp("/sound/" + a + (this.k.supportsMp3 ? ".mp3" : ".wav")),
             this.j.add(a, b),
             b.h(this.g, y(this.i, this, b)))
         }
