@@ -3,7 +3,7 @@ export async function onRequest(context) {
 
     const body = await context.request.json().catch(() => ({}));
 
-    const browseId = body.browseId || "FEwhat_to_watch";
+    const query = body.query || "gorillaz";
 
     const maxResults = Math.min(
         parseInt(body["max-results"] || 25, 10),
@@ -14,45 +14,8 @@ export async function onRequest(context) {
     let channelUploads = false;
     let playlist = false;
 
-    if (browseId === "FEwhat_to_watch") {
-        endpoint =
-            "https://inv.truehosting.net/api/v1/popular";
-
-    } else if (browseId === "FEuploads") {
-        endpoint =
-            "https://inv.truehosting.net/api/v1/search?q=google%20nexus%20before:2014";
-
-    } else if (browseId === "FEtopics") {
-        endpoint =
-            "https://inv.truehosting.net/api/v1/search?q=xbox%20before:2015";
-
-    } else if (browseId === "FEtopics_purchases") {
-        endpoint =
-            "https://inv.truehosting.net/api/v1/search?q=https%3A%2F%2Fyoutube.com%2Fdevicesupport";
-
-    } else if (browseId.startsWith("UC")) {
-        endpoint =
-            `https://inv.truehosting.net/api/v1/channels/${encodeURIComponent(browseId)}`;
-
-        channelUploads = true;
-
-    } else if (browseId.startsWith("PL") || browseId.startsWith("FL")) {
-        endpoint =
-            `https://inv.truehosting.net/api/v1/playlists/${encodeURIComponent(browseId)}`;
-
-        playlist = true;
-
-    } else if (browseId === "FEmusic") {
-        endpoint =
-            "https://inv.truehosting.net/api/v1/search?q=music%20before:2015";
-
-    } else if (browseId === "FEmeg") {
-        return Response.redirect("https://2014ltv.pages.dev/youtubei/v1/meg", 302);
-
-    } else {
-        endpoint =
-            "https://inv.truehosting.net/api/v1/popular";
-    }
+    
+        endpoint = "https://inv.truehosting.net/api/v1/search?q=" + query;
 
     try {
         const response = await fetch(endpoint, {
@@ -191,7 +154,7 @@ export async function onRequest(context) {
                         : null;
 
             return {
-                videoRenderer: {
+                gridVideoRenderer: {
                     videoId: videoId,
 
                     thumbnail: {
