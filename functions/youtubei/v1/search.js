@@ -154,7 +154,7 @@ export async function onRequest(context) {
                         : null;
 
             return {
-                gridVideoRenderer: {
+                compactVideoRenderer: {
                     videoId: videoId,
 
                     thumbnail: {
