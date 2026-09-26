@@ -15,7 +15,7 @@ export async function onRequest(context) {
     let playlist = false;
 
     
-        endpoint = "https://inv.truehosting.net/api/v1/search?q=" + query;
+        endpoint = "https://inv.truehosting.net/api/v1/search?q=" + encodeURIComponent(query);
 
     try {
         const response = await fetch(endpoint, {
@@ -154,7 +154,7 @@ export async function onRequest(context) {
                         : null;
 
             return {
-                compactVideoRenderer: {
+                videoRenderer: {
                     videoId: videoId,
 
                     thumbnail: {
@@ -212,9 +212,10 @@ export async function onRequest(context) {
 
         return new Response(
             JSON.stringify({
+                estimatedResults: data.length,
                 contents: {
-                    horizontalListRenderer: {
-                        items: [
+                    sectionListRenderer: {
+                        contents: [
                             {
                                 itemSectionRenderer: {
                                     contents
