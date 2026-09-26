@@ -213,8 +213,8 @@ export async function onRequest(context) {
         return new Response(
             JSON.stringify({
                 contents: {
-                    sectionListRenderer: {
-                        contents: [
+                    horizontalListRenderer: {
+                        items: [
                             {
                                 itemSectionRenderer: {
                                     contents
