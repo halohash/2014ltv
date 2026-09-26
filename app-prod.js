@@ -31440,7 +31440,7 @@
             refresh_token: a,
             grant_type: "refresh_token"
         };
-        this.o.fe("/o/oauth2/token", null, a, y(this.dh, this), y(this.zj, this))
+        this.o.fe("https://accounts.google.com/o/oauth2/token", null, a, y(this.dh, this), y(this.zj, this))
     }
     ;
     d.dh = function(a) {
@@ -31495,7 +31495,7 @@
             b(!!a);
             this.Po()
         }, this)
-          , g = this.o.fe("/o/oauth2/device/code", null, e, y(function(b) {
+          , g = this.o.fe("https://accounts.google.com/o/oauth2/device/code", null, e, y(function(b) {
             this.rR(b, a, f)
         }, this), y(function() {
             c();
@@ -31535,7 +31535,7 @@
           , f = y(function(e) {
             this.sR(e, a, b, c)
         }, this);
-        this.o.fe("/o/oauth2/token", null, e, f)
+        this.o.fe("https://accounts.google.com/o/oauth2/token", null, e, f)
     }
     ;
     d.sR = function(a, b, c, e) {
@@ -31566,7 +31566,7 @@
     ;
     d.Fy = function() {
         var a = this.xg();
-        a && this.o.fe("/o/oauth2/revoke", null, {
+        a && this.o.fe("https://accounts.google.com/o/oauth2/revoke", null, {
             token: a
         })
     }

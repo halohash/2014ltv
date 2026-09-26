@@ -54,33 +54,6 @@
           {
             "guideEntryRenderer": {
               "icon": {
-                "iconType": "UPLOADS"
-              },
-              "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
-              "formattedTitle": {
-                "runs": [
-                  {
-                    "text": "My Uploads"
-                  }
-                ]
-              },
-              "navigationEndpoint": {
-                "clickTrackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcTIKZy1wZXJzb25hbA==",
-                "browseEndpoint": {
-                  "browseId": "FEuploads"
-                }
-              }
-            }
-          }
-        ],
-        "trackingParams": "CAQQ5isYACITCIfJxpyureECFUKJxAodDO4CcQ=="
-      }
-    },{
-      "guideSectionRenderer": {
-        "items": [
-          {
-            "guideEntryRenderer": {
-              "icon": {
                 "iconType": "SOCIAL"
               },
               "trackingParams": "CAcQtSwYASITCIfJxpyureECFUKJxAodDO4CcQ==",
