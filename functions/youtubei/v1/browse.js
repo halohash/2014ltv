@@ -303,7 +303,8 @@ export async function onRequestOptions() {
                 "*",
 
             "Access-Control-Allow-Methods":
-                "GET, POST, OPTIONS"
+                "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": "*"
 
         }
     });
