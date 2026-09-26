@@ -121,6 +121,44 @@
                     ]
                   }
                 }
+              },{
+                "videoRenderer": {
+                  "videoId": "oranges",
+                  "thumbnail": {
+                    "thumbnails": [
+                      {
+                        "url": "http://thedust.pages.dev/img/Google-Daydream-2nd-generation-closed.jpg",
+                        "width": 480,
+                        "height": 360
+                      }
+                    ]
+                  },
+                  "channelThumbnail": {
+                    "thumbnails": [
+                      {
+                        "url": "https://s.ytimg.com/yt/img/no_thumbnail-vfl4t3-4R.jpg",
+                        "width": 88,
+                        "height": 88
+                      }
+                    ]
+                  },
+                  "shortBylineText": {
+                    "runs": [
+                      {
+                        "text": "Your Father"
+                      }
+                    ]
+                  },
+                  "publishedTimeText": "December 16, 2010",
+                  "viewCountText": "37 ripe oranges",
+                  "title": {
+                    "runs": [
+                      {
+                        "text": "Google Daydream"
+                      }
+                    ]
+                  }
+                }
               }
             ]
           }
